@@ -36,8 +36,7 @@ var WHITE_HOUSE_FACTS = [
     "The White House has 28 fireplaces.",
     "The White House has 8 staircases.",
     "The White House has 3 elevators.",
-    "Pierre L'Enfant designed the city of Washington, D.C.",
-    "Pierre L'Enfant, the planner for Washington, D.C., placed the Capitol for one hill and the President's house on another.",
+    "Pierre L'Enfant, the planner o Washington, D.C., placed the Capitol for one hill and the President's house on another.",
     "The White House was originally known variously as The President's Palace, the Presidential Mansion, or the President's House",
     "The earliest evidence of the public referring to the White House as the White House is in 1811",
     "President Theodore Roosevelt established the official name of the residence as The White House in 1901",
@@ -109,46 +108,46 @@ var WHITE_HOUSE_FACTS = [
 var AlexaSkill = require('./AlexaSkill');
 
 /**
- * SpaceGeek is a child of AlexaSkill.
+ * WhiteHouseFacts is a child of AlexaSkill.
  * To read more about inheritance in JavaScript, see the link below.
  *
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#Inheritance
  */
-var SpaceGeek = function () {
+var WhiteHouseFacts = function () {
     AlexaSkill.call(this, APP_ID);
 };
 
 // Extend AlexaSkill
-SpaceGeek.prototype = Object.create(AlexaSkill.prototype);
-SpaceGeek.prototype.constructor = SpaceGeek;
+WhiteHouseFacts.prototype = Object.create(AlexaSkill.prototype);
+WhiteHouseFacts.prototype.constructor = WhiteHouseFacts;
 
-SpaceGeek.prototype.eventHandlers.onSessionStarted = function (sessionStartedRequest, session) {
-    console.log("SpaceGeek onSessionStarted requestId: " + sessionStartedRequest.requestId
+WhiteHouseFacts.prototype.eventHandlers.onSessionStarted = function (sessionStartedRequest, session) {
+    console.log("WhiteHouseFacts onSessionStarted requestId: " + sessionStartedRequest.requestId
         + ", sessionId: " + session.sessionId);
     // any initialization logic goes here
 };
 
-SpaceGeek.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
-    console.log("SpaceGeek onLaunch requestId: " + launchRequest.requestId + ", sessionId: " + session.sessionId);
+WhiteHouseFacts.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
+    console.log("WhiteHouseFacts onLaunch requestId: " + launchRequest.requestId + ", sessionId: " + session.sessionId);
     handleNewFactRequest(response);
 };
 
 /**
  * Overridden to show that a subclass can override this function to teardown session state.
  */
-SpaceGeek.prototype.eventHandlers.onSessionEnded = function (sessionEndedRequest, session) {
-    console.log("SpaceGeek onSessionEnded requestId: " + sessionEndedRequest.requestId
+WhiteHouseFacts.prototype.eventHandlers.onSessionEnded = function (sessionEndedRequest, session) {
+    console.log("WhiteHouseFacts onSessionEnded requestId: " + sessionEndedRequest.requestId
         + ", sessionId: " + session.sessionId);
     // any cleanup logic goes here
 };
 
-SpaceGeek.prototype.intentHandlers = {
+WhiteHouseFacts.prototype.intentHandlers = {
     "GetNewFactIntent": function (intent, session, response) {
         handleNewFactRequest(response);
     },
 
     "AMAZON.HelpIntent": function (intent, session, response) {
-        response.ask("You can ask Space Geek tell me a space fact, or, you can say exit... What can I help you with?", "What can I help you with?");
+        response.ask("You can ask White House Facts for a fact about the White House, or, you can say exit... What can I help you with?", "What can I help you with?");
     },
 
     "AMAZON.StopIntent": function (intent, session, response) {
@@ -173,13 +172,13 @@ function handleNewFactRequest(response) {
     // Create speech output
     var speechOutput = "Here's your White House fact: " + fact;
 
-    response.tellWithCard(speechOutput, "SpaceGeek", speechOutput);
+    response.tellWithCard(speechOutput, "WhiteHouseFacts", speechOutput);
 }
 
 // Create the handler that responds to the Alexa Request.
 exports.handler = function (event, context) {
-    // Create an instance of the SpaceGeek skill.
-    var spaceGeek = new SpaceGeek();
-    spaceGeek.execute(event, context);
+    // Create an instance of the WhiteHouseFacts skill.
+    var whiteHouseFacts = new WhiteHouseFacts();
+    whiteHouseFacts.execute(event, context);
 };
 
