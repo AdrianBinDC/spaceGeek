@@ -22,7 +22,9 @@
  * FIXME: App ID for the skill
  */
 // var APP_ID = undefined; //replace with "amzn1.echo-sdk-ams.app.[your-unique-value-here]";
-var APP_ID = arn:aws:lambda:us-east-1:023267541044:function:WhiteHouseFacts; //replace with "amzn1.echo-sdk-ams.app.[your-unique-value-here]";
+var APP_ID = "amzn1.echo-sdk-ams.app.0ed8413a-5b85-4bf9-bd0d-85507061476c"; //replace with "amzn1.echo-sdk-ams.app.[your-unique-value-here]";
+
+// amzn1.echo-sdk-ams.app.0ed8413a-5b85-4bf9-bd0d-85507061476c
 
 /**
  * Array containing space facts.
@@ -31,7 +33,7 @@ var WHITE_HOUSE_FACTS = [
     // The following facts come from http://www.factmonster.com/ipka/A0877632.html
     "The White House has 132 rooms.",
     "The White House has 35 bathrooms.",
-    "The White House has 6 levels."
+    "The White House has 6 levels.",
     "The White House has 412 doors.",
     "The White House has 147 windows.",
     "The White House has 28 fireplaces.",
@@ -47,7 +49,7 @@ var WHITE_HOUSE_FACTS = [
     "Thomas Jefferson, subsequently the third President, is said to have submitted a design anonymously for the White House.",
     "James Hoban was the winner of the context to design the White House",
     "James Hoban, the architect who designed the White House, was an Irish immigrant.",
-    "James Hoban, the architect who designed the White House, also supervised completion of the Capitol's North Wing from 1798 to 1800."
+    "James Hoban, the architect who designed the White House, also supervised completion of the Capitol's North Wing from 1798 to 1800.",
     "James Hoban, the architect who designed the White House, also designed the facade of the old state Capitol building in Columbia, South Carolina.",
     "The design of the White House was generally influenced by the Leinster House in Dublin, the native country of the White House's designer, James Hoban.",
     "James Hoban, the architect who designed the White House, was also one of the superintendants in charge of erecting the U.S. Capitol building.",
@@ -61,14 +63,14 @@ var WHITE_HOUSE_FACTS = [
     "Sandstone for the White House's construction is from Stafford County, Virginia.",
     "John Adams, the Second President of the United States, was the first President to live in the White House.",
     "The first President to live in the White House was the second President of the United States.",
-    "Only six of the White House's 132 rooms were complete when John Adams, the first President to live in the White House, moved in."
-    "On August 24, 1814, the British sailed up the Potomac River and set the White House on fire."
+    "Only six of the White House's 132 rooms were complete when John Adams, the first President to live in the White House, moved in.",
+    "On August 24, 1814, the British sailed up the Potomac River and set the White House on fire.",
     "On August 24, 1814, the White House was set on fire by the British during The War of 1812.",
     "A summer thunderstorm put out the fire set alight at the White House by the British during The War of 1812.",
     "The White House has 6 floors: two basements, two public floors, and two floors for the First Family.",
     "Prior to being called the White House, the residence was known as the President's Palace, the President's House, and the Executive Mansion.",
     "To paint the exterior walls of the White House, 570 gallons of paint are required.",
-    "Theodore Roosevelt installed the first tennis court at the White House."
+    "Theodore Roosevelt installed the first tennis court at the White House.",
     "President George H.W. Bush enlarged the present tennis court in 1989.",
     "In 2009, President Barack Obama had basketball court lines painted and removable baskets added to the tennis court.",
     "A quarter-mile jogging track was installed at the White House in 1993 by President Bill Clinton.",
